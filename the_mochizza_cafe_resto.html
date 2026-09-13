@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mochizza Cafe & Resto | Premium Cafe & Restaurant</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        espresso: '#231610',
+                        cream: '#FBF9F5',
+                        warmSand: '#EFECE6',
+                        terracotta: '#BC5D3F',
+                        charcoal: '#1A1816',
+                        goldAccent: '#C5A059'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #FBF9F5; }
+        ::-webkit-scrollbar-thumb { background: #BC5D3F; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-cream text-charcoal font-sans antialiased selection:bg-terracotta selection:text-white">
+
+    <!-- 1. Announcement Bar -->
+    <div class="bg-espresso text-warmSand text-xs tracking-[0.2em] uppercase py-2.5 px-4 text-center font-medium">
+        <span>Fresh Brews</span>
+        <span class="text-terracotta mx-2">•</span>
+        <span>Comfort Food</span>
+        <span class="text-terracotta mx-2">•</span>
+        <span>Good Moments</span>
+    </div>
+
+    <!-- 2. Navigation -->
+    <header id="navbar" class="sticky top-0 z-50 bg-cream/95 backdrop-blur-md border-b border-espresso/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
+            <a href="#" class="flex flex-col group">
+                <span class="font-serif text-2xl lg:text-3xl font-bold tracking-[0.15em] text-espresso group-hover:text-terracotta transition-colors">MOCHIZZA</span>
+                <span class="text-[9px] tracking-[0.3em] text-terracotta font-semibold uppercase -mt-1">Cafe & Resto</span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-10 text-sm font-medium text-espresso">
+                <a href="#home" class="hover:text-terracotta transition-colors">Home</a>
+                <a href="#story" class="hover:text-terracotta transition-colors">Our Story</a>
+                <a href="#menu" class="hover:text-terracotta transition-colors">Menu</a>
+                <a href="#offers" class="hover:text-terracotta transition-colors">Offers</a>
+                <a href="#gallery" class="hover:text-terracotta transition-colors">Gallery</a>
+                <a href="#reviews" class="hover:text-terracotta transition-colors">Reviews</a>
+            </nav>
+
+            <div class="hidden md:flex items-center">
+                <a href="#footer" class="bg-espresso text-cream hover:bg-terracotta transition-all duration-300 px-6 py-3 rounded-full text-xs font-semibold tracking-wider uppercase shadow-sm">
+                    Visit Us
+                </a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-espresso text-2xl focus:outline-none p-2" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cream border-b border-espresso/10 px-8 py-6 space-y-4 shadow-2xl">
+            <a href="#home" class="block text-lg font-serif font-semibold text-espresso hover:text-terracotta mobile-link">Home</a>
+            <a href="#story" class="block text-lg font-serif font-semibold text-espresso hover:text-terracotta mobile-link">Our Story</a>
+            <a href="#menu" class="block text-lg font-serif font-semibold text-espresso hover:text-terracotta mobile-link">Menu</a>
+            <a href="#offers" class="block text-lg font-serif font-semibold text-espresso hover:text-terracotta mobile-link">Offers</a>
+            <a href="#gallery" class="block text-lg font-serif font-semibold text-espresso hover:text-terracotta mobile-link">Gallery</a>
+            <a href="#reviews" class="block text-lg font-serif font-semibold text-espresso hover:text-terracotta mobile-link">Reviews</a>
+            <div class="pt-4">
+                <a href="#footer" class="block text-center bg-espresso text-cream py-3.5 rounded-full text-xs font-semibold uppercase tracking-wider mobile-link">Visit Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Hero Section -->
+    <section id="home" class="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-espresso">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=1920" alt="Cafe Ambience" class="w-full h-full object-cover object-center opacity-35 scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/60 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center py-20">
+            <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/15 text-warmSand text-xs tracking-[0.25em] uppercase mb-8 font-medium shadow-lg">
+                <span>CAFE</span>
+                <span class="text-terracotta">•</span>
+                <span>RESTO</span>
+                <span class="text-terracotta">•</span>
+                <span>MOMENTS</span>
+            </div>
+
+            <h1 class="text-5xl sm:text-7xl lg:text-8xl font-serif text-cream font-bold tracking-tight mb-8 leading-[1.08]">
+                A little more <br>
+                <span class="italic font-normal text-[#E2B386]">delicious.</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-base sm:text-lg text-warmSand/90 font-light mb-12 leading-relaxed">
+                "Where coffee meets comfort, conversations last longer, and every plate is made to be remembered."
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+                <a href="#menu" class="w-full sm:w-auto bg-terracotta hover:bg-terracotta/90 text-white font-semibold text-xs uppercase tracking-[0.2em] px-8 py-4 rounded-full transition-all duration-300 shadow-xl flex items-center justify-center gap-3">
+                    Explore Menu <span>→</span>
+                </a>
+                <a href="#story" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-cream backdrop-blur-md border border-white/20 font-semibold text-xs uppercase tracking-[0.2em] px-8 py-4 rounded-full transition-all duration-300 flex items-center justify-center gap-3">
+                    Discover Our Story <span>↓</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center text-warmSand/50 animate-bounce">
+            <span class="text-[9px] uppercase tracking-[0.3em] mb-1">Scroll</span>
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+        </div>
+    </section>
+
+    <!-- 4. Our Story / Welcome -->
+    <section id="story" class="py-24 lg:py-36 bg-cream relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+                
+                <div class="lg:col-span-6 relative">
+                    <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] border border-espresso/10">
+                        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&q=80&w=1000" alt="Cafe Interior" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="absolute -bottom-10 -right-4 sm:-right-10 w-3/5 z-20 rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] border-4 border-cream hidden sm:block">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&q=80&w=800" alt="Pouring Coffee" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="text-terracotta font-semibold text-xs uppercase tracking-[0.3em] block">Our Story & Philosophy</span>
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-serif text-espresso font-bold leading-tight">
+                        Good food. <br>Better moments.
+                    </h2>
+                    <p class="text-charcoal/80 text-base sm:text-lg leading-relaxed font-light">
+                        The MOCHIZZA CAFE & RESTO was born out of a simple desire: to create a warm sanctuary away from the hustle of everyday life. Whether you're dropping by for your morning single-origin brew, catching up over artisanal wood-fired pizzas, or losing track of time with old friends over decadent desserts, our doors are open to your stories.
+                    </p>
+                    <p class="text-charcoal/80 text-sm sm:text-base leading-relaxed font-light">
+                        Every single ingredient is handpicked, every brew is crafted with precision, and every corner of our cafe is designed to feel like an extension of your own living room.
+                    </p>
+                    <div class="pt-4">
+                        <a href="#menu" class="inline-flex items-center gap-3 text-espresso font-semibold text-xs uppercase tracking-[0.2em] hover:text-terracotta transition-colors group">
+                            <span>See What's Serving</span>
+                            <span class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. What We Offer -->
+    <section class="py-24 lg:py-32 bg-warmSand/60 border-y border-espresso/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-terracotta font-semibold text-xs uppercase tracking-[0.3em] block mb-3">Curated Experiences</span>
+                <h2 class="text-3xl sm:text-5xl font-serif text-espresso font-bold">Made for every mood.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="group relative rounded-2xl overflow-hidden shadow-xl h-[440px] flex flex-col justify-end p-8 text-white">
+                    <div class="absolute inset-0 z-0">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=800" alt="Signature Coffee" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/40 to-transparent"></div>
+                    </div>
+                    <div class="relative z-10 transform group-hover:-translate-y-2 transition-transform duration-300">
+                        <span class="text-[#E2B386] font-serif font-bold text-sm tracking-wider block mb-2">01 — Signature Coffee</span>
+                        <h3 class="text-2xl font-serif font-bold mb-3 text-cream">Rich & Soulful</h3>
+                        <p class="text-warmSand/90 text-sm font-light leading-relaxed">"Rich, smooth and made for slow mornings."</p>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden shadow-xl h-[440px] flex flex-col justify-end p-8 text-white">
+                    <div class="absolute inset-0 z-0">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=800" alt="Comfort Food" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/40 to-transparent"></div>
+                    </div>
+                    <div class="relative z-10 transform group-hover:-translate-y-2 transition-transform duration-300">
+                        <span class="text-[#E2B386] font-serif font-bold text-sm tracking-wider block mb-2">02 — Comfort Food</span>
+                        <h3 class="text-2xl font-serif font-bold mb-3 text-cream">Artisanal Plates</h3>
+                        <p class="text-warmSand/90 text-sm font-light leading-relaxed">"Fresh plates, satisfying bites and cafe favourites."</p>
+                    </div>
+                </div>
+
+                <div class="group relative rounded-2xl overflow-hidden shadow-xl h-[440px] flex flex-col justify-end p-8 text-white">
+                    <div class="absolute inset-0 z-0">
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&q=80&w=800" alt="Good Ambience" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/40 to-transparent"></div>
+                    </div>
+                    <div class="relative z-10 transform group-hover:-translate-y-2 transition-transform duration-300">
+                        <span class="text-[#E2B386] font-serif font-bold text-sm tracking-wider block mb-2">03 — Good Ambience</span>
+                        <h3 class="text-2xl font-serif font-bold mb-3 text-cream">Cozy Corners</h3>
+                        <p class="text-warmSand/90 text-sm font-light leading-relaxed">"A cozy place for friends, dates and conversations."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Menu Section (Future CMS Ready) -->
+    <section id="menu" class="py-24 lg:py-36 bg-cream">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-terracotta font-semibold text-xs uppercase tracking-[0.3em] block mb-3">Our Offerings</span>
+                <h2 class="text-4xl sm:text-5xl font-serif text-espresso font-bold mb-4">Something for everyone.</h2>
+                <p class="text-charcoal/70 text-sm sm:text-base">Explore our carefully crafted menu items made fresh daily.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div id="menu-filters" class="flex flex-wrap items-center justify-center gap-3 mb-16">
+                <button data-category="all" class="menu-filter-btn active-filter px-7 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-espresso text-cream shadow-md">All</button>
+                <button data-category="coffee" class="menu-filter-btn px-7 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-warmSand text-espresso hover:bg-espresso hover:text-cream">Coffee</button>
+                <button data-category="pizza" class="menu-filter-btn px-7 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-warmSand text-espresso hover:bg-espresso hover:text-cream">Pizza</button>
+                <button data-category="bites" class="menu-filter-btn px-7 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-warmSand text-espresso hover:bg-espresso hover:text-cream">Bites</button>
+                <button data-category="desserts" class="menu-filter-btn px-7 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-all bg-warmSand text-espresso hover:bg-espresso hover:text-cream">Desserts</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Populated dynamically via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Special Offer -->
+    <section id="offers" class="py-24 bg-espresso text-cream relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&q=80&w=1920" alt="Offer background" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-block bg-terracotta text-white text-xs font-bold px-5 py-2 rounded-full uppercase tracking-[0.25em] mb-6 shadow-md">
+                Limited Time Promotion
+            </div>
+            <h2 class="text-4xl sm:text-6xl font-serif font-bold mb-6 text-cream">
+                Make your weekend delicious.
+            </h2>
+            <p id="offer-description" class="max-w-xl mx-auto text-warmSand/90 text-base sm:text-lg mb-8 font-light">
+                "Enjoy selected cafe favourites at a special price. Ask our team for today's active offer."
+            </p>
+            <div class="text-3xl sm:text-5xl font-serif font-bold text-[#E2B386] mb-10 tracking-wide" id="offer-badge">
+                UP TO 20% OFF
+            </div>
+            <div>
+                <a href="#footer" class="inline-flex items-center gap-3 bg-cream text-espresso hover:bg-terracotta hover:text-white transition-all duration-300 font-semibold text-xs uppercase tracking-[0.2em] px-9 py-4 rounded-full shadow-2xl">
+                    <span>Claim the vibe</span>
+                    <span>→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Gallery -->
+    <section id="gallery" class="py-24 lg:py-36 bg-cream">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-terracotta font-semibold text-xs uppercase tracking-[0.3em] block mb-3">Visual Moments</span>
+                <h2 class="text-4xl sm:text-5xl font-serif text-espresso font-bold mb-4">A gallery of good times.</h2>
+                <p class="text-charcoal/70 text-sm sm:text-base">Glimpses of our space, aroma, and everyday smiles.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group relative rounded-2xl overflow-hidden shadow-md aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&q=80&w=800" alt="Cafe Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-espresso/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-serif text-lg tracking-wider">
+                        Cafe Interior
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&q=80&w=800" alt="Pouring Coffee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-espresso/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-serif text-lg tracking-wider">
+                        Artisanal Coffee
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=800" alt="Wood-fired Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-espresso/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-serif text-lg tracking-wider">
+                        Wood-Fired Pizza
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&q=80&w=800" alt="Fresh Food Plates" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-espresso/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-serif text-lg tracking-wider">
+                        Gourmet Bites
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&q=80&w=800" alt="Desserts" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-espresso/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-serif text-lg tracking-wider">
+                        Decadent Desserts
+                    </div>
+                </div>
+                <div class="group relative rounded-2xl overflow-hidden shadow-md aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&q=80&w=800" alt="Cozy Ambience" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-espresso/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-serif text-lg tracking-wider">
+                        Cozy Ambience
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Reviews -->
+    <section id="reviews" class="py-24 bg-warmSand/60 border-t border-espresso/10">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-terracotta font-semibold text-xs uppercase tracking-[0.3em] block mb-3">Guest Testimonials</span>
+                <h2 class="text-4xl sm:text-5xl font-serif text-espresso font-bold mb-4">People come for the food.<br>They stay for the feeling.</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-cream p-8 rounded-2xl shadow-sm border border-espresso/10 flex flex-col justify-between">
+                    <div>
+                        <div class="text-amber-500 text-sm space-x-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-charcoal/80 font-light text-base italic leading-relaxed mb-6">
+                            "Beautiful ambience, tasty food and a really comfortable place to spend time with friends. Their Cafe Mocha is unmatched!"
+                        </p>
+                    </div>
+                    <div class="border-t border-espresso/10 pt-4 font-medium text-espresso text-sm">
+                        — Priya Sharma <span class="text-xs text-charcoal/60 block font-normal">Local Food Blogger</span>
+                    </div>
+                </div>
+
+                <div class="bg-cream p-8 rounded-2xl shadow-sm border border-espresso/10 flex flex-col justify-between">
+                    <div>
+                        <div class="text-amber-500 text-sm space-x-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-charcoal/80 font-light text-base italic leading-relaxed mb-6">
+                            "The farmhouse pizza is crispy, cheesy and baked to absolute perfection. Such a warm vibe for evening dates!"
+                        </p>
+                    </div>
+                    <div class="border-t border-espresso/10 pt-4 font-medium text-espresso text-sm">
+                        — Rahul Verma <span class="text-xs text-charcoal/60 block font-normal">Regular Patron</span>
+                    </div>
+                </div>
+
+                <div class="bg-cream p-8 rounded-2xl shadow-sm border border-espresso/10 flex flex-col justify-between">
+                    <div>
+                        <div class="text-amber-500 text-sm space-x-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-charcoal/80 font-light text-base italic leading-relaxed mb-6">
+                            "Quiet corners to work during the day and wonderful mood lighting at night. Absolute gem of a place in town."
+                        </p>
+                    </div>
+                    <div class="border-t border-espresso/10 pt-4 font-medium text-espresso text-sm">
+                        — Ananya Deshmukh <span class="text-xs text-charcoal/60 block font-normal">Designer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Footer / Contact with Google Maps -->
+    <footer id="footer" class="bg-espresso text-cream pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-white/10">
+                
+                <div class="space-y-4">
+                    <span class="font-serif text-2xl font-bold tracking-[0.15em] text-cream block">MOCHIZZA</span>
+                    <span class="text-[10px] tracking-[0.25em] text-terracotta font-semibold uppercase block -mt-2">Cafe & Resto</span>
+                    <p class="text-warmSand/70 text-sm font-light leading-relaxed">
+                        Where coffee meets comfort, conversations last longer, and every plate is made to be remembered.
+                    </p>
+                    <div class="flex items-center space-x-4 pt-2">
+                        <a href="https://instagram.com" target="_blank" class="w-10 h-10 rounded-full bg-white/5 hover:bg-terracotta transition-colors flex items-center justify-center text-cream" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="w-10 h-10 rounded-full bg-white/5 hover:bg-terracotta transition-colors flex items-center justify-center text-cream" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="https://whatsapp.com" target="_blank" class="w-10 h-10 rounded-full bg-white/5 hover:bg-terracotta transition-colors flex items-center justify-center text-cream" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-lg mb-6 text-[#E2B386]">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-warmSand/80">
+                        <li><a href="#home" class="hover:text-terracotta transition-colors">Home</a></li>
+                        <li><a href="#story" class="hover:text-terracotta transition-colors">Our Story</a></li>
+                        <li><a href="#menu" class="hover:text-terracotta transition-colors">Menu</a></li>
+                        <li><a href="#offers" class="hover:text-terracotta transition-colors">Special Offers</a></li>
+                        <li><a href="#gallery" class="hover:text-terracotta transition-colors">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-lg mb-6 text-[#E2B386]">Get in Touch</h4>
+                    <ul class="space-y-3 text-sm text-warmSand/80">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-phone text-terracotta mt-1"></i>
+                            <div>
+                                <span class="block text-[10px] text-warmSand/50 uppercase tracking-wider">Phone</span>
+                                <a href="tel:+919999999999" class="hover:text-terracotta transition-colors font-medium">+91 99999 99999</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-brands fa-whatsapp text-terracotta mt-1"></i>
+                            <div>
+                                <span class="block text-[10px] text-warmSand/50 uppercase tracking-wider">WhatsApp</span>
+                                <a href="https://wa.me/919999999999" target="_blank" class="hover:text-terracotta transition-colors font-medium">WhatsApp Us ↗</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-terracotta mt-1"></i>
+                            <div>
+                                <span class="block text-[10px] text-warmSand/50 uppercase tracking-wider">Location</span>
+                                <span class="font-medium">Nagpur Road, opposite to Dhawad petrol pump, Ramdeo Baba Layout, Laxmi Nagar, Katol, Maharashtra 441302</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif font-bold text-lg mb-6 text-[#E2B386]">Opening Hours & Map</h4>
+                    <ul class="space-y-3 text-sm text-warmSand/80 mb-4">
+                        <li class="flex justify-between border-b border-white/10 pb-2">
+                            <span>Monday – Sunday</span>
+                            <span class="font-medium text-terracotta">11:00 AM – 11:00 PM</span>
+                        </li>
+                    </ul>
+                    <!-- Google Maps Iframe -->
+                    <div class="w-full h-36 rounded-xl overflow-hidden border border-white/15">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.1727685697047!2d78.59207239999999!3d21.264627699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd459062b340945%3A0x7e75d080cb28e243!2sThe%20Mochizza%20cafe%20%26%20Restro!5e0!3m2!1sen!2sin!4v1789284542151!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                         </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-warmSand/50">
+                <p>© 2026 The MOCHIZZA CAFE & RESTO. All rights reserved.</p>
+                <p class="mt-4 sm:mt-0">Crafted for premium cafe experiences</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Application Logic & CMS Data Structures -->
+    <script>
+        // Future CMS Data Object
+        const cafeData = {
+            info: {
+                name: "The MOCHIZZA Cafe & Resto",
+                tagline: "Where coffee meets comfort",
+                phone: "+91 99999 99999",
+                whatsapp: "https://wa.me/919999999999",
+                address: "Nagpur Road, opposite to Dhawad petrol pump, Ramdeo Baba Layout, Laxmi Nagar, Katol, Maharashtra 441302",
+                timing: "11:00 AM – 11:00 PM"
+            },
+            activeOffer: {
+                title: "Make your weekend delicious.",
+                description: "Enjoy selected cafe favourites at a special price. Ask our team for today's active offer.",
+                discountText: "UP TO 20% OFF",
+                active: true
+            },
+            menuItems: [
+                {
+                    id: 1,
+                    category: "coffee",
+                    name: "Cafe Mocha",
+                    description: "Espresso with rich chocolate syrup and steamed velvety milk.",
+                    price: "₹149",
+                    image: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&q=80&w=600"
+                },
+                {
+                    id: 2,
+                    category: "coffee",
+                    name: "Classic Cappuccino",
+                    description: "Traditional Italian espresso with equal parts steamed milk and rich foam.",
+                    price: "₹129",
+                    image: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=600"
+                },
+                {
+                    id: 3,
+                    category: "pizza",
+                    name: "Farmhouse Pizza",
+                    description: "Loaded with fresh bell peppers, crisp onions, mushrooms, and mozzarella.",
+                    price: "₹299",
+                    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=600"
+                },
+                {
+                    id: 4,
+                    category: "pizza",
+                    name: "Cheese Burst Pizza",
+                    description: "Double layer of molten liquid cheese stuffed in a crispy wood-fired crust.",
+                    price: "₹329",
+                    image: "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&q=80&w=600"
+                },
+                {
+                    id: 5,
+                    category: "bites",
+                    name: "Loaded Fries",
+                    description: "Golden crispy fries drizzled with melted cheese sauce and jalapenos.",
+                    price: "₹179",
+                    image: "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&q=80&w=600"
+                },
+                {
+                    id: 6,
+                    category: "desserts",
+                    name: "Chocolate Fudge Cake",
+                    description: "Warm, decadent dark chocolate cake served with silky vanilla gelato.",
+                    price: "₹159",
+                    image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&q=80&w=600"
+                }
+            ]
+        };
+
+        function renderMenu(category = 'all') {
+            const menuGrid = document.getElementById('menu-grid');
+            menuGrid.innerHTML = '';
+
+            const filteredItems = category === 'all' 
+                ? cafeData.menuItems 
+                : cafeData.menuItems.filter(item => item.category === category);
+
+            filteredItems.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = `bg-warmSand/30 rounded-2xl overflow-hidden border border-espresso/10 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group`;
+
+                card.innerHTML = `
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/231610/FBF9F5?text=Mochizza+Cafe'">
+                        <div class="absolute top-3 right-3 bg-espresso/80 backdrop-blur-md text-cream text-[10px] px-3 py-1 rounded-full uppercase tracking-widest font-semibold">
+                            ${item.category}
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="flex justify-between items-baseline mb-2">
+                                <h3 class="font-serif text-xl font-bold text-espresso">${item.name}</h3>
+                                <span class="text-terracotta font-bold text-lg">${item.price}</span>
+                            </div>
+                            <p class="text-charcoal/70 text-sm font-light leading-relaxed mb-4">${item.description}</p>
+                        </div>
+                        <div class="pt-2 border-t border-espresso/10 flex items-center justify-between text-xs text-charcoal/60">
+                            <span>Freshly prepared</span>
+                            <span class="text-espresso font-medium group-hover:text-terracotta transition-colors">Available now</span>
+                        </div>
+                    </div>
+                `;
+                menuGrid.appendChild(card);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMenu('all');
+
+            document.getElementById('offer-description').textContent = `"${cafeData.activeOffer.description}"`;
+            document.getElementById('offer-badge').textContent = cafeData.activeOffer.discountText;
+
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            const filterButtons = document.querySelectorAll('.menu-filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('active-filter', 'bg-espresso', 'text-cream', 'shadow-md');
+                        btn.classList.add('bg-warmSand', 'text-espresso');
+                    });
+                    e.target.classList.remove('bg-warmSand', 'text-espresso');
+                    e.target.classList.add('active-filter', 'bg-espresso', 'text-cream', 'shadow-md');
+
+                    const category = e.target.getAttribute('data-category');
+                    renderMenu(category);
+                });
+            });
+
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 30) {
+                    navbar.classList.add('shadow-md');
+                } else {
+                    navbar.classList.remove('shadow-md');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
